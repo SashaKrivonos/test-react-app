@@ -10,7 +10,7 @@ function Path() {
     <div>
       <Container style={{ display: "flex", flexDirection: "row"}}>
         <div style= {{ BorderRadius: "50%", backgroundColor: "#63428C", width: "1.5rem", height: "1.5rem",  marginTop: "5rem"}}> ghb </div>
-        <AppBar style={{ marginTop: "5rem", backgroundColor: "#FFFFFF",  height: "8rem"}}>
+        <AppBar style={{ marginTop: "5.4rem", backgroundColor: "#FFFFFF",  height: "7.2rem"}}>
           <Container style={{ display: "flex", justifyContent: "space-between" }}>
             <Container style={{ flexDirection: "column", paddingTop: "1.563rem" }}>
               <div
