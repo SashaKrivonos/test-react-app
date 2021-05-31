@@ -1,9 +1,9 @@
 import React from "react";
-import InformaBar from "../Components/InformaBar/index.js";
-import TopNavBar from "../Components/TopNavBar/index.js";
-import Path from "../Components/Path/Path.js";
+import InformaBar from "../Components/InformaBar/InformaBar";
+import TopNavBar from "../Components/TopNavBar/TopNavBar";
+import Path from "../Components/Path/Path";
 
-export default function StudyProjects() {
+const StudyProject : React.FC = () => {
   return (
     <>
       <InformaBar />
@@ -12,3 +12,5 @@ export default function StudyProjects() {
     </>
   );
 }
+
+export default StudyProject;

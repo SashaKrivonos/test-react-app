@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import Container from "@material-ui/core/Container";
 
-function InformaBar() {
+const InformaBar : React.FC = () => {
   return (
     <AppBar style={{ backgroundColor: "#696D79", boxShadow: "none" }}>
       <Container style={{ display: "flex", justifyContent: "center" }}>

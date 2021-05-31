@@ -11,7 +11,7 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import Badge from "@material-ui/core/Badge";
 import logo from "../../assets/logo.svg";
 
-export default function TopNavBar() {
+const TopNavBar: React.FC = () => {
   return (
     <div>
       <AppBar style={{ marginTop: "1.82rem", backgroundColor: "#444957", boxShadow: "none" }}>
@@ -54,3 +54,5 @@ export default function TopNavBar() {
     </div>
   );
 }
+
+export default TopNavBar;

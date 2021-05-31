@@ -5,7 +5,7 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
 
-function Path() {
+const Path : React.FC = () => {
   return (
     <div>
       <Container style={{ display: "flex", flexDirection: "row"}}>
