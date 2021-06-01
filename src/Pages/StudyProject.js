@@ -3,7 +3,7 @@ import InformaBar from "../Components/InformaBar/InformaBar";
 import TopNavBar from "../Components/TopNavBar/TopNavBar";
 import Path from "../Components/Path/Path";
 
-const StudyProject : React.FC = () => {
+const StudyProject = () => {
   return (
     <>
       <InformaBar />
@@ -11,6 +11,6 @@ const StudyProject : React.FC = () => {
       <Path />
     </>
   );
-}
+};
 
 export default StudyProject;
