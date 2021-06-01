@@ -4,8 +4,8 @@ import Typography from "@material-ui/core/Typography";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import Container from "@material-ui/core/Container";
 
-const InformaBar : React.FC = () => {
-  return (
+const InformaBar: React.FC = () => {
+   return (
     <AppBar style={{ backgroundColor: "#696D79", boxShadow: "none" }}>
       <Container style={{ display: "flex", justifyContent: "center" }}>
         <Typography variant="h6" style={{ color: "#F5F5F6", opacity: "1", font: " normal normal bold 22px/29px FS Me" }}>
@@ -15,6 +15,6 @@ const InformaBar : React.FC = () => {
       </Container>
     </AppBar>
   );
-}
+};
 
 export default InformaBar;
