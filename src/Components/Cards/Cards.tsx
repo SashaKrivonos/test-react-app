@@ -50,11 +50,10 @@ const Cards: React.FC = () => {
             }}
           />
           <Container>
-            <Container style={{ display: "flex", flexDirection: "row" }}>
-              <Container>
+            <Container>
+              <Container style={{ marginLeft: "-4rem" }}>
                 <div
                   style={{
-                    marginLeft: "-4rem",
                     width: "26rem",
                     marginTop: "1.4rem",
                     font: "normal normal normal 16px/24px FS Me",
@@ -64,10 +63,28 @@ const Cards: React.FC = () => {
                   Est maiores aliquid vel eos iure. Sed iure quis. Omnis ipsa velit ipsam omnis molestiae et cupiditate
                   aut fugiat.
                 </div>
-                <div>Trial phase</div>
-                <div> II </div>
-                <div> Disease </div>
-                <div> Lung, Non-Small Cell | Lung, Small Cell</div>
+                <div
+                  style={{
+                    font: "normal normal normal 16px/24px FS Me",
+                    color: "#444957",
+                    opacity: "1",
+                    marginTop: "0.8rem",
+                  }}>
+                  Trial phase
+                </div>
+                <div style={{ font: "normal normal normal 16px/24px FS Me", color: "#444957", opacity: "1" }}> II </div>
+                <div
+                  style={{
+                    font: "normal normal normal 16px/24px FS Me",
+                    color: "#444957",
+                    opacity: "1",
+                    marginTop: "0.8rem",
+                  }}>
+                  Disease
+                </div>
+                <div style={{ font: "normal normal normal 16px/24px FS Me", color: "#444957", opacity: "1" }}>
+                  Lung, Non-Small Cell | Lung, Small Cell
+                </div>
               </Container>
               <hr
                 style={{
@@ -75,14 +92,33 @@ const Cards: React.FC = () => {
                   backgroundColor: "#4449574D",
                   height: "0.09rem",
                   border: "none",
+                  width: "25.5rem",
+                  marginTop: "1.5rem",
+                  marginLeft: "-3rem",
                 }}></hr>
-              <Container>
-                <div>Owner</div>
+              <Container style={{ marginLeft: "-4rem" }}>
+                <div style={{ font: "normal normal normal 16px/24px FS Me", color: "#444957", opacity: "1" }}>Owner</div>
                 <Container style={{ display: "flex", flexDirection: "row" }}>
-                  <AccountCircleIcon />
-                  <div>Amber Gordon(You)</div>
+                  <AccountCircleIcon style={{ marginLeft: "-1.6rem" }} />
+                  <div
+                    style={{
+                      font: "normal normal normal 16px/24px FS Me",
+                      color: "#444957",
+                      opacity: "1",
+                      paddingLeft: "0.6rem",
+                    }}>
+                    Amber Gordon(You)
+                  </div>
                 </Container>
-                <div> Members </div>
+                <div
+                  style={{
+                    font: "normal normal normal 16px/24px FS Me",
+                    color: "#444957",
+                    opacity: "1",
+                    marginTop: "0.6rem",
+                  }}>
+                  Members
+                </div>
               </Container>
             </Container>
             <hr
@@ -91,15 +127,55 @@ const Cards: React.FC = () => {
                 backgroundColor: "#4449574D",
                 height: "0.09rem",
                 border: "none",
-                marginLeft: "7rem",
                 transform: "rotate(-90deg)",
-                marginTop: "14.4rem",
+                width: "27rem",
+                marginTop: "-5.8rem",
+                marginRight: "5rem",
               }}></hr>
-            <Container>
-              <div>
-                You have no scenarios. Set up a scenario by using the Create Scenario button. You can create up to five
-                scenarios in each Study Project.
+            <Container
+              style={{
+                marginLeft: "25rem",
+                marginTop: "-12.6rem",
+                width: "17.5rem",
+                display: "flex",
+                alignItems: "start",
+                flexDirection: "column",
+              }}>
+              <div style={{ font: "normal normal bold 16px/24px FS Me", color: "#444957" }}>You have no scenarios. </div>
+              <div
+                style={{
+                  font: "normal normal normal 16px/24px FS Me",
+                  color: "#444957",
+                  opacity: "1",
+                  paddingTop: "2rem",
+                }}>
+                {" "}
+                Set up a scenario by using the Create Scenario button.{" "}
               </div>
+              <div
+                style={{
+                  font: "normal normal normal 16px/24px FS Me",
+                  color: "#444957",
+                  opacity: "1",
+                  paddingTop: "2rem",
+                }}>
+                {" "}
+                You can create up to five scenarios in each Study Project.{" "}
+              </div>
+              <Button
+                style={{
+                  backgroundColor: "#D1497C",
+                  borderRadius: "0",
+                  textAlign: "center",
+                  font: "normal normal normal 14px/18px FS Me",
+                  color: "#FFFFFF",
+                  opacity: "1",
+                  width: "17.5rem",
+                  height: "3rem",
+                  marginTop: "5rem",
+                }}>
+                New Study Projects
+              </Button>
             </Container>
           </Container>
         </CardContent>
