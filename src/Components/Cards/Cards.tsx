@@ -10,14 +10,14 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 const Cards: React.FC = () => {
   return (
     <div>
-      <Card style={{ marginTop: "16.25rem", width: "49rem", height: "32rem", marginLeft: "2.563rem" }}>
+      <Card style={{ width: "49rem", height: "32rem", marginLeft: "2.563rem", border: "1px solid #C7C8CD" }}>
         <CardContent>
           <Container
             style={{
               display: "flex",
-              justifyContent: "space-between",
+              
               flexDirection: "row",
-              alignItems: "center",
+         
               marginTop: "1.5rem",
             }}>
             <Container style={{}}>
