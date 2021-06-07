@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
@@ -27,9 +27,18 @@ const Path: React.FC = () => {
     setOpen(false);
   };
 
+  const [form, setForm] = useState({
+    name: "",
+    description: "",
+  });
+
   const [disease, setDisease] = React.useState("");
 
   const [value, setSelectedValue] = React.useState("a");
+
+  const changeHandler = (event: { target: HTMLInputElement }) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
 
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setDisease(event.target.value as string);

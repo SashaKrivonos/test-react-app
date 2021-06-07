@@ -10,6 +10,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormLabel from "@material-ui/core/FormLabel";
 import SearchIcon from "@material-ui/icons/Search";
 import CancelIcon from "@material-ui/icons/Cancel";
+import ArrowDropDownCircleIcon from "@material-ui/icons/ArrowDropDownCircle";
 
 const ProjectFilters: React.FC = () => {
   type Anchor = "left";
@@ -198,7 +199,9 @@ const ProjectFilters: React.FC = () => {
       {(["left"] as Anchor[]).map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)} style={{ marginTop: "-11rem", marginLeft: "-13rem" }}>
-            {anchor}
+            <ArrowDropDownCircleIcon
+              style={{ width: "2.5rem", height: "2.5rem", transform: "rotate(270deg)", color: "#63428C" }}
+            />
           </Button>
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}
