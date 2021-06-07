@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
@@ -27,9 +27,18 @@ const Path: React.FC = () => {
     setOpen(false);
   };
 
+  const [form, setForm] = useState({
+    name: "",
+    description: "",
+  });
+
   const [disease, setDisease] = React.useState("");
 
   const [value, setSelectedValue] = React.useState("a");
+
+  const changeHandler = (event: { target: HTMLInputElement }) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
 
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setDisease(event.target.value as string);
@@ -40,7 +49,8 @@ const Path: React.FC = () => {
   };
 
   const body = (
-    <div style={{ backgroundColor: "#FFFFFF", width: "26.5rem", height: "67.5rem", float: "right", paddingBottom: "2rem" }}>
+    <div
+      style={{ backgroundColor: "#FFFFFF", width: "26.5rem", height: "67.5rem", float: "right", paddingBottom: "2rem" }}>
       <Container>
         <CloseIcon className={styles.close} />
         <h2
@@ -179,7 +189,6 @@ const Path: React.FC = () => {
             />
           </RadioGroup>
         </FormControl>
-
         <InputLabel id="demo-simple-select-outlined-label" style={{ marginTop: "1rem" }}>
           Disease
         </InputLabel>
@@ -220,9 +229,9 @@ const Path: React.FC = () => {
               borderRadius: "1px",
               borderColor: "#C7C8CD",
               borderStyle: "solid",
-              height: "3rem", 
+              height: "3rem",
               marginTop: "2.5rem",
-              marginLeft: "1.969rem"
+              marginLeft: "1.969rem",
             }}>
             Cancel
           </Button>
@@ -233,7 +242,7 @@ const Path: React.FC = () => {
 
   return (
     <div>
-      <AppBar style={{ marginTop: "5.4rem", backgroundColor: "#FFFFFF", height: "7.2rem" }}>
+      <AppBar style={{ marginTop: "5.6rem", backgroundColor: "#FFFFFF", height: "7.2rem", marginRight: "-2.6rem" }}>
         <Container style={{ display: "flex", justifyContent: "space-between" }}>
           <Container style={{ flexDirection: "column", paddingTop: "1.563rem" }}>
             <div
