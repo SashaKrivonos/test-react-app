@@ -6,21 +6,15 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import styles from "./styles.module.scss";
 
 const Cards: React.FC = () => {
   return (
     <div>
-      <Card style={{ width: "49rem", height: "32rem", marginLeft: "2.563rem", border: "1px solid #C7C8CD" }}>
+      <Card className={styles.cards}>
         <CardContent>
-          <Container
-            style={{
-              display: "flex",
-              
-              flexDirection: "row",
-         
-              marginTop: "1.5rem",
-            }}>
-            <Container style={{}}>
+          <Container style={{ display: "flex", flexDirection: "row", marginTop: "1.5rem" }}>
+            <Container>
               <Typography
                 variant="h5"
                 component="h2"
@@ -38,53 +32,24 @@ const Cards: React.FC = () => {
             </Container>
             <MoreVertIcon />
           </Container>
-          <hr
-            style={{
-              color: "#4449574D",
-              backgroundColor: "#4449574D",
-              height: "0.09rem",
-              border: "none",
-              width: "49rem",
-              marginLeft: "-1.1rem",
-              marginTop: "3rem",
-            }}
-          />
+          <hr className={styles.horizontalLine} />
           <Container>
             <Container>
-              <Container style={{ marginLeft: "-4rem" }}>
-                <div
-                  style={{
-                    width: "26rem",
-                    marginTop: "1.4rem",
-                    font: "normal normal normal 16px/24px FS Me",
-                    color: "#444957",
-                    opacity: "1",
-                  }}>
+              <Container
+                style={{
+                  marginLeft: "-4rem",
+                  font: "normal normal normal 16px/24px FS Me",
+                  color: "#444957",
+                  opacity: "1",
+                }}>
+                <div className={styles.rectangleMainText}>
                   Est maiores aliquid vel eos iure. Sed iure quis. Omnis ipsa velit ipsam omnis molestiae et cupiditate
                   aut fugiat.
                 </div>
-                <div
-                  style={{
-                    font: "normal normal normal 16px/24px FS Me",
-                    color: "#444957",
-                    opacity: "1",
-                    marginTop: "0.8rem",
-                  }}>
-                  Trial phase
-                </div>
-                <div style={{ font: "normal normal normal 16px/24px FS Me", color: "#444957", opacity: "1" }}> II </div>
-                <div
-                  style={{
-                    font: "normal normal normal 16px/24px FS Me",
-                    color: "#444957",
-                    opacity: "1",
-                    marginTop: "0.8rem",
-                  }}>
-                  Disease
-                </div>
-                <div style={{ font: "normal normal normal 16px/24px FS Me", color: "#444957", opacity: "1" }}>
-                  Lung, Non-Small Cell | Lung, Small Cell
-                </div>
+                <div className={styles.rectangleTrial}>Trial phase</div>
+                <div> II </div>
+                <div className={styles.rectangleDisease}>Disease</div>
+                <div>Lung, Non-Small Cell | Lung, Small Cell</div>
               </Container>
               <hr
                 style={{
@@ -96,42 +61,22 @@ const Cards: React.FC = () => {
                   marginTop: "1.5rem",
                   marginLeft: "-3rem",
                 }}></hr>
-              <Container style={{ marginLeft: "-4rem" }}>
-                <div style={{ font: "normal normal normal 16px/24px FS Me", color: "#444957", opacity: "1" }}>Owner</div>
-                <Container style={{ display: "flex", flexDirection: "row" }}>
-                  <AccountCircleIcon style={{ marginLeft: "-1.6rem" }} />
-                  <div
-                    style={{
-                      font: "normal normal normal 16px/24px FS Me",
-                      color: "#444957",
-                      opacity: "1",
-                      paddingLeft: "0.6rem",
-                    }}>
-                    Amber Gordon(You)
-                  </div>
+              <Container
+                style={{
+                  marginLeft: "-4rem",
+                  font: "normal normal normal 16px/24px FS Me",
+                  color: "#444957",
+                  opacity: "1",
+                }}>
+                <div>Owner</div>
+                <Container style={{ display: "flex", flexDirection: "row", marginLeft: "-1.5rem" }}>
+                  <AccountCircleIcon />
+                  <div className={styles.rectangleOwners}>Amber Gordon(You)</div>
                 </Container>
-                <div
-                  style={{
-                    font: "normal normal normal 16px/24px FS Me",
-                    color: "#444957",
-                    opacity: "1",
-                    marginTop: "0.6rem",
-                  }}>
-                  Members
-                </div>
+                <div className={styles.rectangleMembers}>Members</div>
               </Container>
             </Container>
-            <hr
-              style={{
-                color: "#4449574D",
-                backgroundColor: "#4449574D",
-                height: "0.09rem",
-                border: "none",
-                transform: "rotate(-90deg)",
-                width: "27rem",
-                marginTop: "-5.8rem",
-                marginRight: "5rem",
-              }}></hr>
+            <hr className={styles.rectangleVerticalLine}></hr>
             <Container
               style={{
                 marginLeft: "25rem",
@@ -140,28 +85,13 @@ const Cards: React.FC = () => {
                 display: "flex",
                 alignItems: "start",
                 flexDirection: "column",
+                color: "#444957",
+                opacity: "1",
+                font: "normal normal normal 16px/24px FS Me",
               }}>
-              <div style={{ font: "normal normal bold 16px/24px FS Me", color: "#444957" }}>You have no scenarios. </div>
-              <div
-                style={{
-                  font: "normal normal normal 16px/24px FS Me",
-                  color: "#444957",
-                  opacity: "1",
-                  paddingTop: "2rem",
-                }}>
-                {" "}
-                Set up a scenario by using the Create Scenario button.{" "}
-              </div>
-              <div
-                style={{
-                  font: "normal normal normal 16px/24px FS Me",
-                  color: "#444957",
-                  opacity: "1",
-                  paddingTop: "2rem",
-                }}>
-                {" "}
-                You can create up to five scenarios in each Study Project.{" "}
-              </div>
+              <div className={styles.rectangleBold}>You have no scenarios. </div>
+              <div className={styles.rectanglePadding}> Set up a scenario by using the Create Scenario button. </div>
+              <div className={styles.rectanglePadding}> You can create up to five scenarios in each Study Project. </div>
               <Button
                 style={{
                   backgroundColor: "#D1497C",

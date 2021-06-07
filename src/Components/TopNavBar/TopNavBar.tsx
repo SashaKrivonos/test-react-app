@@ -10,21 +10,15 @@ import FolderIcon from "@material-ui/icons/Folder";
 import RemoveIcon from "@material-ui/icons/Remove";
 import Badge from "@material-ui/core/Badge";
 import logo from "../../assets/logo.svg";
+import styles from "./styles.module.scss";
+import "./styles.overrides.scss";
+
 
 const TopNavBar: React.FC = () => {
   return (
     <div>
       <AppBar style={{ marginTop: "1.82rem", backgroundColor: "#444957", boxShadow: "none" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginTop: "0.563rem",
-            marginBottom: "0.438rem",
-            marginLeft: "1rem",
-            paddingRight: "1.6rem",
-          }}>
+        <div className={styles.appContainer}>
           <Container>
             <img src={logo} alt="logo"></img>
           </Container>

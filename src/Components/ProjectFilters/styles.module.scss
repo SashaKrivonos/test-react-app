@@ -1,0 +1,57 @@
+.searchLogo {
+  color: #444957;
+  font: normal normal bold 32px/40px FS Me;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.searchPanel {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid;
+  width: 22.5rem;
+  height: 3rem;
+  margin-top: 1.063rem;
+  align-items: center;
+}
+
+.searchExamples {
+  width: 8.813rem;
+  height: 2.75rem;
+  background-color: #ecedee;
+  margin-top: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font: normal normal normal 16px/36px FS Me;
+  color: #444957;
+}
+
+.searchContainer {
+  width: 12.25rem;
+  height: 2.75rem;
+  background-color: #ecedee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font: normal normal normal 16px/36px FS Me;
+  color: #444957;
+}
+
+.cancelIconSmall {
+  color: #444957;
+  padding-left: 0.2rem;
+}
+
+.searchSmallPadding {
+  padding-left: 0.2rem;
+}
+
+.searchNonSmallPadding {
+  padding-left: 0.4rem;
+}
+
+.cancelIconNonSmall {
+  color: #444957;
+  padding-left: 0.5rem;
+}

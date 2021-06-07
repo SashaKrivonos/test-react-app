@@ -1,0 +1,60 @@
+.cards {
+  width: 49rem;
+  height: 32rem;
+  margin-left: 2.563rem;
+  border: 1px solid #c7c8cd;
+}
+
+.horizontalLine {
+  color: #4449574d;
+  background-color: #4449574d;
+  height: 0.09rem;
+  border: none;
+  width: 49rem;
+  margin-left: -1.1rem;
+  margin-top: 3rem;
+}
+
+.rectangleMainText {
+  width: 26rem;
+  margin-top: 1.4rem;
+}
+
+.rectangleTrial {
+  margin-top: 0.8rem;
+}
+
+.rectangleDisease {
+  margin-top: 0.8rem;
+}
+
+.CircleIcon {
+  margin-left: -1.6rem;
+}
+
+.rectangleOwners {
+  padding-left: 0.6rem;
+}
+
+.rectangleMembers {
+  margin-top: 0.6rem;
+}
+
+.rectangleVerticalLine {
+  color: #4449574d;
+  background-color: #4449574d;
+  height: 0.09rem;
+  border: none;
+  transform: rotate(-90deg);
+  width: 27rem;
+  margin-top: -5.8rem;
+  margin-right: 5rem;
+}
+
+.rectangleBold {
+  font: normal normal bold 16px/24px FS Me;
+}
+
+.rectanglePadding {
+  padding-top: 2rem;
+}

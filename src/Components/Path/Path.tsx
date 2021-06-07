@@ -14,7 +14,8 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormLabel from "@material-ui/core/FormLabel";
 import CloseIcon from "@material-ui/icons/Close";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
+import "./styles.overrides.scss";
 
 const Path: React.FC = () => {
   const [open, setOpen] = React.useState(false);
@@ -32,13 +33,12 @@ const Path: React.FC = () => {
     description: "",
   });
 
-  
   const [disease, setDisease] = React.useState("");
 
   const [value, setSelectedValue] = React.useState("a");
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setForm({ ...form, [event.target.name]: event.target.value as string});
+    setForm({ ...form, [event.target.name]: event.target.value as string });
   };
 
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
@@ -65,13 +65,12 @@ const Path: React.FC = () => {
         </h2>
         <div> Name* </div>
         <TextField
-         value={form.name}
-         onChange={changeHandler}
+          value={form.name}
+          onChange={changeHandler}
           id="outlined-basic"
           label="Outlined"
           variant="outlined"
           style={{ width: "22.5rem", height: "3rem" }}
-         
         />
         <div style={{ marginTop: "1.5rem" }}> Description* </div>
         <TextField
@@ -82,7 +81,7 @@ const Path: React.FC = () => {
           style={{ width: "22.5rem" }}
           rows={4}
           value={form.description}
-         onChange={changeHandler}
+          onChange={changeHandler}
         />
         <FormControl component="fieldset">
           <FormLabel component="legend" style={{ paddingTop: "0.5rem" }}>
@@ -246,21 +245,13 @@ const Path: React.FC = () => {
     </div>
   );
 
-
   return (
     <div>
       <AppBar style={{ marginTop: "5.6rem", backgroundColor: "#FFFFFF", height: "7.2rem", marginRight: "-2.6rem" }}>
-        <Container style={{ display: "flex", justifyContent: "space-between" }}>
+        <Container
+          style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row" }}>
           <Container style={{ flexDirection: "column", paddingTop: "1.563rem" }}>
-            <div
-              style={{
-                color: "#444957",
-                font: "normal normal bold 32px/40px FS Me",
-                textTransform: "capitalize",
-                opacity: "1",
-              }}>
-              Study Projects
-            </div>
+            <div className={styles.pathStudy}>Study Projects</div>
             <Typography
               style={{
                 font: "normal normal normal 22px/36px FS Me",
@@ -268,7 +259,7 @@ const Path: React.FC = () => {
                 textTransform: "capitalize",
                 opacity: "1",
               }}>
-              3 Projects
+              1 Project
             </Typography>
           </Container>
           <div>

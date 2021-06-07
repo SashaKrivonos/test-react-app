@@ -11,6 +11,7 @@ import FormLabel from "@material-ui/core/FormLabel";
 import SearchIcon from "@material-ui/icons/Search";
 import CancelIcon from "@material-ui/icons/Cancel";
 import ArrowDropDownCircleIcon from "@material-ui/icons/ArrowDropDownCircle";
+import styles from "./styles.module.scss";
 
 const ProjectFilters: React.FC = () => {
   type Anchor = "left";
@@ -39,57 +40,18 @@ const ProjectFilters: React.FC = () => {
   const list = (anchor: Anchor) => (
     <div style={{ width: "26rem" }}>
       <Container style={{ flexDirection: "column", paddingTop: "7rem" }}>
-        <div
-          style={{
-            color: "#444957",
-            font: "normal normal bold 32px/40px FS Me",
-            textTransform: "capitalize",
-            opacity: "1",
-          }}>
-          Search projects
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            border: "1px solid",
-            width: "22.5rem",
-            height: "3rem",
-            marginTop: "1.063rem",
-            alignItems: "center",
-          }}>
+        <div className={styles.searchLogo}>Search projects</div>
+        <div className={styles.searchPanel}>
           <SearchIcon />
           <InputBase placeholder="Search…" inputProps={{ "aria-label": "search" }} />
         </div>
-        <div
-          style={{
-            width: "8.813rem",
-            height: "2.75rem",
-            backgroundColor: "#ECEDEE",
-            marginTop: "0.2rem",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-          }}>
-          <div style={{ font: "normal normal normal 16px/36px FS Me", color: "#444957", paddingLeft: "0.2rem" }}>
-            {" "}
-            Lung, Small Cell
-          </div>
-          <CancelIcon style={{ color: "#444957", paddingLeft: "0.2rem" }} />
+        <div className={styles.searchExamples}>
+          <div className={styles.searchSmallPadding}> Lung, Small Cell</div>
+          <CancelIcon className={styles.cancelIconSmall} />
         </div>
-        <div
-          style={{
-            width: "12.25rem",
-            height: "2.75rem",
-            backgroundColor: "#ECEDEE",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-          }}>
-          <div style={{ font: "normal normal normal 16px/36px FS Me", color: "#444957", paddingLeft: "0.4rem" }}>
-            Lung, Non-Small Cell
-          </div>
-          <CancelIcon style={{ color: "#444957", paddingLeft: "0.5rem" }} />
+        <div className={styles.searchContainer}>
+          <div className={styles.searchNonSmallPadding}>Lung, Non-Small Cell</div>
+          <CancelIcon className={styles.cancelIconNonSmall} />
         </div>
         <FormControl component="fieldset">
           <FormLabel
