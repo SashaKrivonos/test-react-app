@@ -32,12 +32,13 @@ const Path: React.FC = () => {
     description: "",
   });
 
+  
   const [disease, setDisease] = React.useState("");
 
   const [value, setSelectedValue] = React.useState("a");
 
-  const changeHandler = (event: { target: HTMLInputElement }) => {
-    setForm({ ...form, [event.target.name]: event.target.value });
+  const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setForm({ ...form, [event.target.name]: event.target.value as string});
   };
 
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
@@ -64,10 +65,13 @@ const Path: React.FC = () => {
         </h2>
         <div> Name* </div>
         <TextField
+         value={form.name}
+         onChange={changeHandler}
           id="outlined-basic"
           label="Outlined"
           variant="outlined"
           style={{ width: "22.5rem", height: "3rem" }}
+         
         />
         <div style={{ marginTop: "1.5rem" }}> Description* </div>
         <TextField
@@ -77,6 +81,8 @@ const Path: React.FC = () => {
           multiline
           style={{ width: "22.5rem" }}
           rows={4}
+          value={form.description}
+         onChange={changeHandler}
         />
         <FormControl component="fieldset">
           <FormLabel component="legend" style={{ paddingTop: "0.5rem" }}>
@@ -239,6 +245,7 @@ const Path: React.FC = () => {
       </Container>
     </div>
   );
+
 
   return (
     <div>
