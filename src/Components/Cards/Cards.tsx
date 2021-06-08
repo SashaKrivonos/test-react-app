@@ -1,9 +1,5 @@
 import React from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
+import { Card, CardContent, Button, Typography, Container } from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import styles from "./styles.module.scss";
@@ -15,15 +11,7 @@ const Cards: React.FC = () => {
         <CardContent>
           <Container style={{ display: "flex", flexDirection: "row", marginTop: "1.5rem" }}>
             <Container>
-              <Typography
-                variant="h5"
-                component="h2"
-                style={{
-                  font: "normal normal normal 22px/36px FS Me",
-                  color: "#444957",
-                  textTransform: "capitalize",
-                  opacity: "1",
-                }}>
+              <Typography variant="h5" component="h2">
                 Study Project name one
               </Typography>
               <Typography color="textSecondary" gutterBottom>

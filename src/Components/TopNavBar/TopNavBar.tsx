@@ -1,18 +1,14 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Container from "@material-ui/core/Container";
-import Button from "@material-ui/core/Button";
+import { AppBar, Container, Button, Badge } from "@material-ui/core";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import HistoryIcon from "@material-ui/icons/History";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import FolderIcon from "@material-ui/icons/Folder";
 import RemoveIcon from "@material-ui/icons/Remove";
-import Badge from "@material-ui/core/Badge";
 import logo from "../../assets/logo.svg";
 import styles from "./styles.module.scss";
 import "./styles.overrides.scss";
-
 
 const TopNavBar: React.FC = () => {
   return (
@@ -47,6 +43,6 @@ const TopNavBar: React.FC = () => {
       </AppBar>
     </div>
   );
-}
+};
 
 export default TopNavBar;

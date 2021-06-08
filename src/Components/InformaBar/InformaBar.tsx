@@ -1,8 +1,6 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Typography from "@material-ui/core/Typography";
+import { AppBar, Typography, Container } from "@material-ui/core";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import Container from "@material-ui/core/Container";
 import styles from "./styles.module.scss";
 
 const InformaBar: React.FC = () => {

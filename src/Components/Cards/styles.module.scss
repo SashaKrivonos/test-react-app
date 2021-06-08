@@ -58,3 +58,16 @@
 .rectanglePadding {
   padding-top: 2rem;
 }
+
+.test {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+}
+
+.secondTest {
+  font: normal normal normal 22px/36px FS Me;
+  color: #444957;
+  text-transform: capitalize;
+  opacity: 1;
+}

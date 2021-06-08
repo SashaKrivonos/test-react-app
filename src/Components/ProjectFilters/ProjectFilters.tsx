@@ -1,12 +1,6 @@
 import React from "react";
-import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
-import InputBase from "@material-ui/core/InputBase";
-import FormControl from "@material-ui/core/FormControl";
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+import {Drawer, Button, Container, InputBase } from "@material-ui/core";
+import {FormControl, Radio, RadioGroup, FormControlLabel} from "@material-ui/core";
 import FormLabel from "@material-ui/core/FormLabel";
 import SearchIcon from "@material-ui/icons/Search";
 import CancelIcon from "@material-ui/icons/Cancel";
