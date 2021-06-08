@@ -55,3 +55,51 @@
   color: #444957;
   padding-left: 0.5rem;
 }
+
+.body {
+  width: 26rem;
+}
+
+.mainContainer {
+  flex-direction: column;
+  padding-top: 7rem;
+  display: flex;
+  padding-left: 2rem;
+}
+
+.circleIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: rotate(270deg);
+  color: #63428c;
+}
+
+.folderIcon {
+  padding-left: 1rem;
+  color: #c7c8cd;
+}
+
+.removeIcon {
+  transform: rotate(90deg);
+  color: #c7c8cd;
+}
+
+.notificationsIcon {
+  color: #c7c8cd;
+}
+
+.historyIcon {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #c7c8cd;
+}
+
+.helpOutlineIcon {
+  padding-right: 0.5rem;
+  color: #c7c8cd;
+}
+
+.accountIcon {
+  padding-right: 0.5rem;
+  color: #c7c8cd;
+}

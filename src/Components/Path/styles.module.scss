@@ -3,9 +3,38 @@
   float: right;
 }
 
-.pathStudy {
-  color: #444957;
+.body {
+  background-color: #ffffff;
+  width: 26.5rem;
+  height: 67.5rem;
+  float: right;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.textLogo {
   font: normal normal bold 32px/40px FS Me;
+  color: #444957;
   text-transform: capitalize;
   opacity: 1;
+  padding-left: 1rem;
+  
+}
+
+.FormControl {
+  width: 22.5rem;
+  height: 3rem;
+}
+
+.appBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.logo {
+  flex-direction: column;
+  padding-top: 1.563rem;
 }

@@ -1,12 +1,84 @@
 import React, { useState } from "react";
-import { AppBar, Button, Container, Typography } from "@material-ui/core";
-import { Modal, TextField, MenuItem, FormControl, FormControlLabel} from "@material-ui/core";
-import { Select, InputLabel, Radio, RadioGroup, FormLabel} from "@material-ui/core";
+import { AppBar, Button, Container, Typography, Box } from "@material-ui/core";
+import { Modal, TextField, MenuItem, FormControl, FormControlLabel } from "@material-ui/core";
+import { Select, InputLabel, Radio, RadioGroup, FormLabel } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import styles from "./styles.module.scss";
-import "./styles.overrides.scss";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  description: {
+    marginTop: "1.5rem",
+  },
+  textfield: {
+    width: "22.5rem",
+    height: "3rem",
+  },
+  textfieldDescription: {
+    width: "22.5rem",
+  },
+  formLabel: {
+    paddingTop: "0.5rem",
+  },
+  inputLabel: {
+    marginTop: "1rem",
+  },
+  createProject: {
+    backgroundColor: "#D1497C",
+    borderRadius: "0",
+    font: "normal normal normal 14px/18px FS Me",
+    color: "#FFFFFF",
+    opacity: "1",
+    width: "10.5rem",
+    height: "3rem",
+    marginTop: "2.5rem",
+  },
+  cancel: {
+    border: "1px solid var(---c7c8cd)",
+    background: "#FFFFFF 0% 0% no-repeat padding-box",
+    borderWidth: "1px ",
+    borderRadius: "1px",
+    borderColor: "#C7C8CD",
+    borderStyle: "solid",
+    height: "3rem",
+    marginTop: "2.5rem",
+    marginLeft: "1.969rem",
+  },
+  appBar: {
+    marginTop: "5.6rem",
+    backgroundColor: "#FFFFFF",
+    height: "7.2rem",
+    marginRight: "-2.6rem",
+  },
+  pathStudy: {
+    color: "#444957",
+    font: "normal normal bold 32px/40px FS Me",
+    textTransform: "capitalize",
+    opacity: "1",
+  },
+  numberOfProjects: {
+    font: "normal normal normal 22px/36px FS Me",
+    color: "#444957",
+    textTransform: "capitalize",
+    opacity: "1",
+  },
+  newStudyProject: {
+    backgroundColor: "#D1497C",
+    borderRadius: "0",
+    textAlign: "center",
+    font: "normal normal normal 14px/18px FS Me",
+    color: "#FFFFFF",
+    opacity: "1",
+    width: "10.5rem",
+    height: "3rem",
+    marginTop: "2.5rem",
+    marginLeft: "-16rem",
+  },
+});
 
 const Path: React.FC = () => {
+  const classes = useStyles();
+
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -39,41 +111,32 @@ const Path: React.FC = () => {
   };
 
   const body = (
-    <div
-      style={{ backgroundColor: "#FFFFFF", width: "26.5rem", height: "67.5rem", float: "right", paddingBottom: "2rem" }}>
+    <div className={styles.body}>
       <Container>
         <CloseIcon className={styles.close} />
-        <h2
-          style={{
-            font: "normal normal bold 32px/40px FS Me",
-            color: "#444957",
-            textTransform: "capitalize",
-            opacity: "1",
-          }}>
-          New Study Project
-        </h2>
-        <div> Name* </div>
+        <h2 className={styles.textLogo}>New Study Project</h2>
+        <Typography> Name* </Typography>
         <TextField
           value={form.name}
           onChange={changeHandler}
           id="outlined-basic"
           label="Outlined"
           variant="outlined"
-          style={{ width: "22.5rem", height: "3rem" }}
+          className={classes.textfield}
         />
-        <div style={{ marginTop: "1.5rem" }}> Description* </div>
+        <Typography className={classes.description}> Description* </Typography>
         <TextField
           id="outlined-basic"
           label="Outlined"
           variant="outlined"
           multiline
-          style={{ width: "22.5rem" }}
+          className={classes.textfieldDescription}
           rows={4}
           value={form.description}
           onChange={changeHandler}
         />
         <FormControl component="fieldset">
-          <FormLabel component="legend" style={{ paddingTop: "0.5rem" }}>
+          <FormLabel component="legend" className={classes.formLabel}>
             *Trial phase
           </FormLabel>
           <RadioGroup
@@ -183,10 +246,10 @@ const Path: React.FC = () => {
             />
           </RadioGroup>
         </FormControl>
-        <InputLabel id="demo-simple-select-outlined-label" style={{ marginTop: "1rem" }}>
+        <InputLabel id="demo-simple-select-outlined-label" className={classes.inputLabel}>
           Disease
         </InputLabel>
-        <FormControl variant="outlined" style={{ width: "22.5rem", height: "3rem" }}>
+        <FormControl variant="outlined" className={styles.FormControl}>
           <Select
             labelId="demo-simple-select-outlined-label"
             id="demo-simple-select-outlined"
@@ -202,33 +265,8 @@ const Path: React.FC = () => {
           </Select>
         </FormControl>
         <Container>
-          <Button
-            style={{
-              backgroundColor: "#D1497C",
-              borderRadius: "0",
-              font: "normal normal normal 14px/18px FS Me",
-              color: "#FFFFFF",
-              opacity: "1",
-              width: "10.5rem",
-              height: "3rem",
-              marginTop: "2.5rem",
-            }}>
-            Create Study Project
-          </Button>
-          <Button
-            style={{
-              border: "1px solid var(---c7c8cd)",
-              background: "#FFFFFF 0% 0% no-repeat padding-box",
-              borderWidth: "1px ",
-              borderRadius: "1px",
-              borderColor: "#C7C8CD",
-              borderStyle: "solid",
-              height: "3rem",
-              marginTop: "2.5rem",
-              marginLeft: "1.969rem",
-            }}>
-            Cancel
-          </Button>
+          <Button className={classes.createProject}>Create Study Project</Button>
+          <Button className={classes.cancel}>Cancel</Button>
         </Container>
       </Container>
     </div>
@@ -236,35 +274,14 @@ const Path: React.FC = () => {
 
   return (
     <div>
-      <AppBar style={{ marginTop: "5.6rem", backgroundColor: "#FFFFFF", height: "7.2rem", marginRight: "-2.6rem" }}>
-        <Container
-          style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row" }}>
-          <Container style={{ flexDirection: "column", paddingTop: "1.563rem" }}>
-            <div className={styles.pathStudy}>Study Projects</div>
-            <Typography
-              style={{
-                font: "normal normal normal 22px/36px FS Me",
-                color: "#444957",
-                textTransform: "capitalize",
-                opacity: "1",
-              }}>
-              1 Project
-            </Typography>
-          </Container>
+      <AppBar className={classes.appBar}>
+        <Box className={styles.appBox}>
+          <Box className={styles.logo}>
+            <Typography className={classes.pathStudy}>Study Projects</Typography>
+            <Typography className={classes.numberOfProjects}>1 Project</Typography>
+          </Box>
           <div>
-            <Button
-              style={{
-                backgroundColor: "#D1497C",
-                borderRadius: "0",
-                textAlign: "center",
-                font: "normal normal normal 14px/18px FS Me",
-                color: "#FFFFFF",
-                opacity: "1",
-                width: "10.5rem",
-                height: "3rem",
-                marginTop: "2.5rem",
-              }}
-              onClick={handleOpen}>
+            <Button className={classes.newStudyProject} onClick={handleOpen}>
               New Study Projects
             </Button>
             <Modal
@@ -275,7 +292,7 @@ const Path: React.FC = () => {
               {body}
             </Modal>
           </div>
-        </Container>
+        </Box>
       </AppBar>
     </div>
   );

@@ -71,3 +71,44 @@
   text-transform: capitalize;
   opacity: 1;
 }
+
+.rectangleMainContainer {
+  margin-left: -3rem;
+  font: normal normal normal 16px/24px FS Me;
+  color: #444957;
+  opacity: 1;
+}
+
+.secondHorizontalLine {
+  color: #4449574d;
+  background-color: #4449574d;
+  height: 0.09rem;
+  border: none;
+  width: 25.5rem;
+  margin-top: 1.5rem;
+  margin-left: -3rem;
+}
+
+.rectangleContainersOwners {
+  margin-left: -3rem;
+  font: normal normal normal 16px/24px FS Me;
+  color: #444957;
+  opacity: 1;
+}
+
+.containerOwners {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftContainer {
+  margin-left: 27rem;
+  margin-top: -12.6rem;
+  width: 17.5rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #444957;
+  opacity: 1;
+  font: normal normal normal 16px/24px FS Me;
+}

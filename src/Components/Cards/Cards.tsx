@@ -1,17 +1,59 @@
 import React from "react";
-import { Card, CardContent, Button, Typography, Container } from "@material-ui/core";
+import { Card, CardContent, Button, Typography, Container, Box } from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import styles from "./styles.module.scss";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  secondTest: {
+    font: "normal normal normal 22px/36px FS Me",
+    color: "#444957",
+    texttransform: "capitalize",
+    opacity: "1",
+  },
+  rectangleMainText: {
+    width: "26rem",
+    marginTop: "1.4rem",
+    font: "normal normal normal 16px/24px FS Me",
+    color: "#444957",
+    opacity: "1",
+  },
+  rectangleTrial: {
+    marginTop: "0.8rem",
+    width: "26rem",
+    font: "normal normal normal 16px/24px FS Me",
+    color: "#444957",
+    opacity: "1",
+  },
+  owner: {
+    width: "26rem",
+    font: "normal normal normal 16px/24px FS Me",
+    color: "#444957",
+    opacity: "1",
+  },
+  button: {
+    backgroundColor: "#D1497C",
+    borderRadius: "0",
+    textAlign: "center",
+    font: "normal normal normal 14px/18px FS Me",
+    color: "#FFFFFF",
+    opacity: "1",
+    width: "17.5rem",
+    height: "3rem",
+    marginTop: "5rem",
+  },
+});
 
 const Cards: React.FC = () => {
+  const classes = useStyles();
   return (
     <div>
       <Card className={styles.cards}>
         <CardContent>
-          <Container style={{ display: "flex", flexDirection: "row", marginTop: "1.5rem" }}>
+          <Box className={styles.test}>
             <Container>
-              <Typography variant="h5" component="h2">
+              <Typography variant="h5" component="h2" className={classes.secondTest}>
                 Study Project name one
               </Typography>
               <Typography color="textSecondary" gutterBottom>
@@ -19,82 +61,39 @@ const Cards: React.FC = () => {
               </Typography>
             </Container>
             <MoreVertIcon />
-          </Container>
+          </Box>
           <hr className={styles.horizontalLine} />
           <Container>
             <Container>
-              <Container
-                style={{
-                  marginLeft: "-4rem",
-                  font: "normal normal normal 16px/24px FS Me",
-                  color: "#444957",
-                  opacity: "1",
-                }}>
-                <div className={styles.rectangleMainText}>
+              <Box className={styles.rectangleMainContainer}>
+                <Typography className={classes.rectangleMainText}>
                   Est maiores aliquid vel eos iure. Sed iure quis. Omnis ipsa velit ipsam omnis molestiae et cupiditate
                   aut fugiat.
-                </div>
-                <div className={styles.rectangleTrial}>Trial phase</div>
+                </Typography>
+                <Typography className={classes.rectangleTrial}>Trial phase</Typography>
                 <div> II </div>
-                <div className={styles.rectangleDisease}>Disease</div>
+                <Typography className={classes.rectangleTrial}>Disease</Typography>
                 <div>Lung, Non-Small Cell | Lung, Small Cell</div>
-              </Container>
-              <hr
-                style={{
-                  color: "#4449574D",
-                  backgroundColor: "#4449574D",
-                  height: "0.09rem",
-                  border: "none",
-                  width: "25.5rem",
-                  marginTop: "1.5rem",
-                  marginLeft: "-3rem",
-                }}></hr>
-              <Container
-                style={{
-                  marginLeft: "-4rem",
-                  font: "normal normal normal 16px/24px FS Me",
-                  color: "#444957",
-                  opacity: "1",
-                }}>
-                <div>Owner</div>
-                <Container style={{ display: "flex", flexDirection: "row", marginLeft: "-1.5rem" }}>
+              </Box>
+              <hr className={styles.secondHorizontalLine}></hr>
+              <Box className={styles.rectangleContainersOwners}>
+                <Typography className={classes.owner}>Owner</Typography>
+                <Box className={styles.containerOwners}>
                   <AccountCircleIcon />
                   <div className={styles.rectangleOwners}>Amber Gordon(You)</div>
-                </Container>
+                </Box>
                 <div className={styles.rectangleMembers}>Members</div>
-              </Container>
+              </Box>
             </Container>
             <hr className={styles.rectangleVerticalLine}></hr>
-            <Container
-              style={{
-                marginLeft: "25rem",
-                marginTop: "-12.6rem",
-                width: "17.5rem",
-                display: "flex",
-                alignItems: "start",
-                flexDirection: "column",
-                color: "#444957",
-                opacity: "1",
-                font: "normal normal normal 16px/24px FS Me",
-              }}>
+            <Box className={styles.leftContainer}>
               <div className={styles.rectangleBold}>You have no scenarios. </div>
               <div className={styles.rectanglePadding}> Set up a scenario by using the Create Scenario button. </div>
               <div className={styles.rectanglePadding}> You can create up to five scenarios in each Study Project. </div>
-              <Button
-                style={{
-                  backgroundColor: "#D1497C",
-                  borderRadius: "0",
-                  textAlign: "center",
-                  font: "normal normal normal 14px/18px FS Me",
-                  color: "#FFFFFF",
-                  opacity: "1",
-                  width: "17.5rem",
-                  height: "3rem",
-                  marginTop: "5rem",
-                }}>
+              <Button className={classes.button}>
                 New Study Projects
               </Button>
-            </Container>
+            </Box>
           </Container>
         </CardContent>
       </Card>

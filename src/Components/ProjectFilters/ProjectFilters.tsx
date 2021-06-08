@@ -1,13 +1,28 @@
 import React from "react";
-import {Drawer, Button, Container, InputBase } from "@material-ui/core";
-import {FormControl, Radio, RadioGroup, FormControlLabel} from "@material-ui/core";
+import { Drawer, Button, Box, InputBase } from "@material-ui/core";
+import { FormControl, Radio, RadioGroup, FormControlLabel } from "@material-ui/core";
 import FormLabel from "@material-ui/core/FormLabel";
 import SearchIcon from "@material-ui/icons/Search";
 import CancelIcon from "@material-ui/icons/Cancel";
 import ArrowDropDownCircleIcon from "@material-ui/icons/ArrowDropDownCircle";
 import styles from "./styles.module.scss";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  radioGroup: {
+    display: "flex",
+    flexDirection: "column",
+    font: "normal normal normal 14px/16px FS Me",
+    color: "#444957",
+  },
+  button: {
+    marginTop: "-11rem",
+    marginLeft: "-13rem",
+  },
+});
 
 const ProjectFilters: React.FC = () => {
+  const classes = useStyles();
   type Anchor = "left";
 
   const [state, setState] = React.useState({
@@ -32,8 +47,8 @@ const ProjectFilters: React.FC = () => {
   };
 
   const list = (anchor: Anchor) => (
-    <div style={{ width: "26rem" }}>
-      <Container style={{ flexDirection: "column", paddingTop: "7rem" }}>
+    <div className={styles.body}>
+      <Box className={styles.mainContainer}>
         <div className={styles.searchLogo}>Search projects</div>
         <div className={styles.searchPanel}>
           <SearchIcon />
@@ -54,12 +69,7 @@ const ProjectFilters: React.FC = () => {
             Sort
           </FormLabel>
           <RadioGroup
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              font: "normal normal normal 14px/16px FS Me",
-              color: "#444957",
-            }}
+            className={classes.radioGroup}
             aria-label="position"
             name="position"
             defaultValue="top"
@@ -146,7 +156,7 @@ const ProjectFilters: React.FC = () => {
             />
           </RadioGroup>
         </FormControl>
-      </Container>
+      </Box>
     </div>
   );
 
@@ -154,10 +164,8 @@ const ProjectFilters: React.FC = () => {
     <div>
       {(["left"] as Anchor[]).map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)} style={{ marginTop: "-11rem", marginLeft: "-13rem" }}>
-            <ArrowDropDownCircleIcon
-              style={{ width: "2.5rem", height: "2.5rem", transform: "rotate(270deg)", color: "#63428C" }}
-            />
+          <Button onClick={toggleDrawer(anchor, true)} className={classes.button}>
+            <ArrowDropDownCircleIcon className={styles.circleIcon} />
           </Button>
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}
