@@ -7,7 +7,21 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace, FS Me;
 }
 
+
+@font-face {
+  font-family: FS Me;
+  src: url(assets/fonts/FSMeTrial-Bold.otf);
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: FS Me;
+  src: url(assets/fonts/FSMeTrial-Regular.otf);
+  font-style: normal;
+  font-weight: normal;
+}
 

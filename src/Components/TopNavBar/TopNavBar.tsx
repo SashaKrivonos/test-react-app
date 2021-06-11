@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     font: "normal normal normal 14px/18px FS Me",
     color: "#FFFFFF",
     opacity: "1",
-    width: "8.063rem",
+    width: "8.463rem",
     height: "2.25rem",
   },
 });
