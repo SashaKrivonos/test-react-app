@@ -18,7 +18,6 @@
   text-transform: capitalize;
   opacity: 1;
   padding-left: 1rem;
-  
 }
 
 .FormControl {
@@ -37,4 +36,11 @@
 .logo {
   flex-direction: column;
   padding-top: 1.563rem;
+}
+
+@font-face {
+  font-family: FS Me;
+  src: url("../../assets/fonts/._FSMeTrial-Regular.otf") format('otf');
+  font-style: normal;
+  font-weight: normal;
 }

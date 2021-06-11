@@ -6,15 +6,15 @@ import Cards from "../Components/Cards/Cards";
 import ProjectFilters from "../Components/ProjectFilters/ProjectFilters";
 import Container from "@material-ui/core/Container";
 
+
 const StudyProject = () => {
   return (
     <div>
       <InformaBar />
       <TopNavBar />
       <Container style={{ marginTop: "14rem", marginLeft: "11rem" }}>
-      <ProjectFilters />
+        <ProjectFilters />
         <Path />
-        
       </Container>
       <Cards />
     </div>
