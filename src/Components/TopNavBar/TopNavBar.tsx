@@ -13,7 +13,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   appBar: {
-    marginTop: "1.82rem",
+    marginTop: "1.80rem",
     backgroundColor: "#444957",
     boxShadow: "none",
   },
